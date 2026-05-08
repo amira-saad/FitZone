@@ -9,12 +9,13 @@ const plans = [
     price: "$0",
     desc: "For beginners starting their journey",
     features: ["Access to basic workouts", "Limited progress tracking"],
+    link: null,
   },
   {
     name: "Pro",
     price: "400 EGP/mo",
     popular: true,
-    link: "https://buy.stripe.com/test_eVq4gAc8AamMcbB0tSd7q00", 
+    link: import.meta.env.VITE_STRIPE_PRO_LINK,
     desc: "Best for consistent training",
     features: [
       "All workouts access",
@@ -25,7 +26,7 @@ const plans = [
   {
     name: "Premium",
     price: "700 EGP/mo",
-    link: "https://buy.stripe.com/test_8x214ogoQ0Mc7Vl4K8d7q01", 
+    link: import.meta.env.VITE_STRIPE_PREMIUM_LINK,
     desc: "Advanced features & coaching",
     features: [
       "Everything in Pro",
@@ -33,7 +34,7 @@ const plans = [
       "Custom workout plans",
     ],
   },
-];
+]
 
 export default function PricingPage() {
   const navigate = useNavigate();

@@ -9,4 +9,16 @@ export default defineConfig({
       host: 'localhost',
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // split vendor libraries into separate chunks
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'firebase-vendor': ['firebase/app', 'firebase/auth', 'firebase/firestore'],
+          'redux-vendor': ['@reduxjs/toolkit', 'react-redux'],
+        },
+      },
+    },
+  },
 })
