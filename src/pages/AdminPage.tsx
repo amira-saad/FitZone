@@ -380,7 +380,7 @@ export default function AdminPage() {
   const navigate = useNavigate()
 
   // access control
-  const [role, setRole] = useState<'admin' | 'user' | null>(null)
+const [_role, setRole] = useState<'admin' | 'user' | null>(null);
   const [loading, setLoading] = useState(true)
 
   // workouts list
