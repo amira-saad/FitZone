@@ -4,5 +4,9 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "buildCommand": "vite build",
+  "installCommand": "npm install --prefer-offline",
+  "framework": "vite",
+  "outputDirectory": "dist"
 }
